@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: wap862d9z-nodejs
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: wap862d9z-nodejs 
+  name: wap862d9z-nodejs
+spec:
+  ports:
+  - port: 3001 
+    targetPort: 3001 
+  selector:
+    app.kubernetes.io/instance: wap862d9z-nodejs 

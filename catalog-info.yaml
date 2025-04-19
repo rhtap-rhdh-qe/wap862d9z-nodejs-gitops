@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wap862d9z-nodejs-gitops
+  description: This is GitOps manifest for wap862d9z-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=wap862d9z-nodejs
+    backstage.io/kubernetes-id: wap862d9z-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: wap862d9z-nodejs
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wap862d9z-nodejs
